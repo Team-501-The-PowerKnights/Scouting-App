@@ -13,7 +13,7 @@ This file generates random fake data for scouting data analysis tests in the
 format specified in Slack.
 """
 def main():
-    filename = "file1.txt"
+    filename = "file2.txt"
     
     position = ["Blue1", "Blue2", "Blue3", "Red1", "Red2", "Red3"]
     scouter_name = ["Carter", "Matt", "Peter", "Isaac"]
@@ -29,7 +29,7 @@ def main():
     filename = path + filename
     
     data = {}
-    for i in range(20):
+    for i in range(20, 1, -1):
         team_num = randint(1, 4)
         match_num = i
         key = "team" + str(team_num) + "_" + str(i)
