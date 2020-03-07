@@ -1,0 +1,4 @@
+team,timestamp,match_num,position,scouter_name,autoline,auto_cell_levels,num_auto_balls,lower_balls,outer_balls,inner_balls,shooting_position,park/climb,defense,driving_skill,num_fouls,problems,notes
+238,5,1,Blue1,Carter,yes,"['high', 'low']",5,0,10,3,['far side trench'],success,3,3,0,['none'],
+501,5,1,Blue1,Carter,yes,"['high', 'low']",5,0,10,3,['far side trench'],success,3,3,0,['none'],
+501,5,2,Blue1,Carter,yes,"['high', 'low']",5,0,10,3,['far side trench'],success,3,3,0,['none'],
