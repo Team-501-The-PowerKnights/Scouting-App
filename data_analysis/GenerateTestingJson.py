@@ -6,81 +6,49 @@ Created on Sat Mar  7 13:17:10 2020
 @author: ithier
 """
 import json
+from random import randint
 
-["team", "timestamp", "match_num", "position", "scouter_name",
-                "autoline", "auto_cell_levels", "num_auto_balls", "lower_balls",
-                "outer_balls", "inner_balls", "shooting_position", "park/climb",
-                "defense", "driving_skill", "num_fouls", "problems", "notes"]
+filename = "file2.txt"
+
+position = ["Blue1", "Blue2", "Blue3", "Red1", "Red2", "Red3"]
+scouter_name = ["Carter", "Matt", "Peter", "Isaac"]
+auto_line = ["yes", "no"]
+auto_cell_levels = ["high", "low"]
+shooting_positions = ["driver station", "autoline", "nearside trench", 
+                      "farside trench", "nothing", "other"]
+park_climb = ["nothing", "parked", "failed", "success", "balanced success"]
+problems = ["fell apart", "lost capabilities", "disabled", "other", "none"]
 
 path = "./json_files/"
-filename = "file1.txt"
 
 filename = path + filename
 
 data = {}
-
-data["team501_1"] = {
-        "team" : 501,
+for i in range(20):
+    team_num = randint(1, 4)
+    match_num = i
+    key = "team" + str(team_num) + "_" + str(i)
+    data[key] = {
+        "team" : team_num,
         "timestamp" : 5,
-        "match_num": 1,
-        "position" : "Blue1",
-        "scouter_name" : "Carter",
-        "autoline" : "yes",
-        "auto_cell_levels" : ["high", "low"],
-        "num_auto_balls" : 5,
-        "lower_balls" : 0,
-        "outer_balls" : 10,
-        "inner_balls" : 3,
-        "shooting_position": ["far side trench"],
-        "park/climb" : "success",
-        "defense" : 3,
-        "driving_skill" : 3,
-        "num_fouls" : 0,
-        "problems" : ["none"],
+        "match_num": match_num,
+        "position" : position[randint(0, len(position) - 1)],
+        "scouter_name" : scouter_name[randint(0, len(scouter_name) - 1)],
+        "autoline" : auto_line[randint(0, 1)],
+        "auto_cell_levels" : auto_cell_levels[randint(0, 1)],
+        "num_auto_balls" : randint(0, 7),
+        "lower_balls" : randint(0, 10),
+        "outer_balls" : randint(0, 15),
+        "inner_balls" : randint(0, 5),
+        "shooting_position": shooting_positions[randint(0, len(shooting_positions) - 1)],
+        "park/climb" : park_climb[randint(0, len(park_climb) - 1)],
+        "defense" : randint(1,5),
+        "driving_skill" : randint(1,5),
+        "num_fouls" : randint(1,3),
+        "problems" : problems[randint(0, len(problems) - 1)],
         "notes" : ""
-        }
+            }
 
-data["team238_1"] = {
-        "team" : 238,
-        "timestamp" : 5,
-        "match_num": 1,
-        "position" : "Blue1",
-        "scouter_name" : "Carter",
-        "autoline" : "yes",
-        "auto_cell_levels" : ["high", "low"],
-        "num_auto_balls" : 5,
-        "lower_balls" : 0,
-        "outer_balls" : 10,
-        "inner_balls" : 3,
-        "shooting_position": ["far side trench"],
-        "park/climb" : "success",
-        "defense" : 3,
-        "driving_skill" : 3,
-        "num_fouls" : 0,
-        "problems" : ["none"],
-        "notes" : ""
-        }
-
-data["team501_2"] = {
-        "team" : 501,
-        "timestamp" : 5,
-        "match_num": 2,
-        "position" : "Blue1",
-        "scouter_name" : "Carter",
-        "autoline" : "yes",
-        "auto_cell_levels" : ["high", "low"],
-        "num_auto_balls" : 5,
-        "lower_balls" : 0,
-        "outer_balls" : 10,
-        "inner_balls" : 3,
-        "shooting_position": ["far side trench"],
-        "park/climb" : "success",
-        "defense" : 3,
-        "driving_skill" : 3,
-        "num_fouls" : 0,
-        "problems" : ["none"],
-        "notes" : ""
-        }
 
 with open(filename, 'w') as outfile:
     json.dump(data, outfile)
