@@ -35,6 +35,7 @@ class Home extends StatelessWidget {
             bottom: 10,
           ),
           child: FloatingActionButton(
+            heroTag: null,
             onPressed: () {},
             child: Icon(Icons.settings),
           ),
@@ -46,15 +47,15 @@ class Home extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        // backgroundColor: Colors.white,
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.only(
-              left: 8.0,
-              top: 8.0,
-              bottom: 8.0,
+              // left: 8.0,
+              top: 10.0,
+              bottom: 10.0,
             ),
             child: FloatingActionButton(
+              heroTag: null,
               onPressed: null,
               child: Icon(
                 Icons.bluetooth,
@@ -62,19 +63,20 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  fullscreenDialog: true,
-                  builder: (_) {
-                    return AboutUsScreen();
-                  },
-                ),
-              );
-            },
-            child: Image(
-              image: AssetImage('assets/images/black-powerKnights-logo.png'),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 3),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AboutUsScreen(),
+                  ),
+                );
+              },
+              child: Image(
+                image: AssetImage('assets/images/black-powerKnights-logo.png'),
+              ),
             ),
           ),
           SizedBox(width: 10)
