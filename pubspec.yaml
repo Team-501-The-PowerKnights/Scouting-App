@@ -17,3 +17,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito/regular.ttf
+        - asset: assets/fonts/Nunito/italic.ttf
+          style: italic
+        - asset: assets/fonts/Nunito/bold.ttf
+          weight: 700
