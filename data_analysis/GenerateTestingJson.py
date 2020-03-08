@@ -40,7 +40,7 @@ def main():
             "position" : position[randint(0, len(position) - 1)],
             "scouter_name" : scouter_name[randint(0, len(scouter_name) - 1)],
             "autoline" : auto_line[randint(0, 1)],
-            "auto_cell_levels" : auto_cell_levels[randint(0, 1)],
+            "auto_cell_levels" : auto_cell_levels[randint(0,1)],
             "num_auto_balls" : randint(0, 7),
             "lower_balls" : randint(0, 10),
             "outer_balls" : randint(0, 15),

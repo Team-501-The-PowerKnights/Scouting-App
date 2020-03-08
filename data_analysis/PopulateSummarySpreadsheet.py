@@ -43,6 +43,24 @@ def find_end(data, start):
     return i - 1
 
 """
+get_list_from_csv
+Input: string- a string of the format "[item1, item2, item3, etc]" that you want
+to put create a list of items of
+Output: a list of strings for each item in the input
+Description: When reading lists from a csv, it reads as a string and it's hard
+to get it back into list form. This function parses the string and creates a list
+of all of the items. It removes leading and trailing whitespace.
+"""
+def get_list_from_csv(string):
+    string = string.strip("[")
+    string = string.strip("]")
+    lst = string.split(",")
+    result = []
+    for item in lst:
+        result.append(item.strip(" "))
+    return result
+
+"""
 get_stats_for_team
 Inputs: df - the dataframe with all data compiled of all tteam matches
         start - the start row index for a particular team
@@ -77,8 +95,11 @@ def get_stats_for_team(df, start, end):
     
     for i in range(start, end + 1):
         auto_l = df.loc[i, "auto_cell_levels"]
-        if auto_l not in auto_level:
-            auto_level.append(auto_l)
+        auto_l = get_list_from_csv(auto_l)
+        
+        for item in auto_l:
+            if item not in auto_level:
+                auto_level.append(item)
         
         auto_line += df.loc[i, "autoline"]
         auto_powercells += df.loc[i, "num_auto_balls"]
@@ -87,8 +108,10 @@ def get_stats_for_team(df, start, end):
         inner_powercells += df.loc[i, "inner_balls"]
         
         shooting_p = df.loc[i, "shooting_position"]
-        if shooting_p not in shooting_positions:
-            shooting_positions.append(shooting_p)
+        shooting_p = get_list_from_csv(shooting_p)
+        for item in shooting_p:
+            if item not in shooting_positions:
+                shooting_positions.append(item)
         
         pc = df.loc[i, "park/climb"]
         if pc == "parked":
@@ -105,8 +128,10 @@ def get_stats_for_team(df, start, end):
         fouls += df.loc[i, "num_fouls"]
         
         prob = df.loc[i, "problems"]
-        if prob not in problems:
-            problems.append(prob)
+        prob = get_list_from_csv(prob)
+        for item in prob:
+            if item not in problems:
+                problems.append(item)
         
         note = df.loc[i, "notes"]
         if note not in notes:
