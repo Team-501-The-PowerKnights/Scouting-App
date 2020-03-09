@@ -12,7 +12,8 @@ from PopulateSummarySpreadsheet import populate_summary
 """
 Generate compiled and summary CSVs. CSVs are saved to the path "./generated_data/".
 Thus, make sure there is a generated_data folder in the directory this file
-is in.
+is in. It will overwrite the files in the generated_data directory so if you 
+want to keep the old ones, change their name before running this script.
 """
 def main():
     # the path to a folder containing all the json files
