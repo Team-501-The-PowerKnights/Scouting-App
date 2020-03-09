@@ -176,7 +176,7 @@ def get_stats_for_team(df, start, end):
 Generate a summary_data csv file where each row is a different team number and
 data in each row are calculated stats for each team
 """
-def main():
+def populate_summary():
     data_filename = "./generated_data/compiled_data.csv"
     csv_filename = "./generated_data/summary_data.csv"
     
@@ -191,4 +191,3 @@ def main():
     df.sort_values("team", inplace = True)
     df.to_csv(csv_filename, index=False)
 
-main()
