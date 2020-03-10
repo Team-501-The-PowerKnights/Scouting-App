@@ -43,7 +43,7 @@ def populate_compiled(path_to_json):
     json_files = [file for file in os.listdir(path_to_json) if file.endswith(".txt")]
     for file in json_files:
         df = populate_df(df, file, path_to_json)
-    df.sort_values("team", inplace = True)
+    df.sort_values(["team", "match_num"], inplace = True)
     csv_filename = "./generated_data/compiled_data.csv"
     df.to_csv(csv_filename, index=False)
     
