@@ -32,15 +32,14 @@ Create a pandas dataframe with the specified column names and put all data from
 the json files into the appropriate columns in the dataframe. Json files are all the 
 files ending in .txt that are in the specified path.
 """
-def main():
+def populate_compiled(path_to_json):
     column_names = ["team", "timestamp", "match_num", "position", "scouter_name",
                     "autoline", "auto_cell_levels", "num_auto_balls", "lower_balls",
                     "outer_balls", "inner_balls", "shooting_position", "park/climb",
                     "defense", "driving_skill", "num_fouls", "problems", "notes"]
     
     df = pd.DataFrame(columns = column_names)
-    
-    path_to_json = './json_files/'
+
     json_files = [file for file in os.listdir(path_to_json) if file.endswith(".txt")]
     for file in json_files:
         df = populate_df(df, file, path_to_json)
@@ -48,4 +47,3 @@ def main():
     csv_filename = "./generated_data/compiled_data.csv"
     df.to_csv(csv_filename, index=False)
     
-main()

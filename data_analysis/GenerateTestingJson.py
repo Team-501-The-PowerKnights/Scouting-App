@@ -22,7 +22,7 @@ def main():
     shooting_positions = ["driver station", "autoline", "nearside trench", 
                           "farside trench", "nothing", "other"]
     park_climb = ["nothing", "parked", "failed", "success", "balanced success"]
-    problems = ["fell apart", "lost capabilities", "disabled", "other", "none"]
+    problems = ["none", "fell apart", "lost capabilities", "disabled", "other"]
     
     path = "./json_files/"
     
@@ -50,8 +50,8 @@ def main():
             "defense" : randint(1,5),
             "driving_skill" : randint(1,5),
             "num_fouls" : randint(1,3),
-            "problems" : problems[randint(0, len(problems) - 1)],
-            "notes" : ""
+            "problems" : ["none", problems[randint(1, len(problems) - 1)]],
+            "notes" : "works great"
                 }
     
     
