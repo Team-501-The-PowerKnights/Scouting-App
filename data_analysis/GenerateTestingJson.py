@@ -29,8 +29,8 @@ def main():
     filename = path + filename
     
     data = {}
-    for i in range(20, 1, -1):
-        team_num = randint(1, 4)
+    for i in range(80*3, 1, -1):
+        team_num = randint(1, 40)
         match_num = i
         key = "team" + str(team_num) + "_" + str(i)
         data[key] = {
