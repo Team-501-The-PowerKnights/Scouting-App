@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 // Package imports
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
+// Project imports
+import 'package:scouting_app/routes/setup/theme.dart';
+
 class SetupGreetingRoute extends StatelessWidget {
   static const routeName = '/setup/greeting';
 
@@ -44,14 +47,17 @@ class SetupGreetingRoute extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ),
-                  onPressed: () {},
+                  onPressed: () => Navigator.popAndPushNamed(
+                    context,
+                    SetupThemeRoute.routeName,
+                  ),
                   color: Colors.green,
                   splashColor: Colors.green,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text(
+                      const Text(
                         "Start Setup",
                         style: TextStyle(
                           fontSize: 25,
@@ -59,7 +65,7 @@ class SetupGreetingRoute extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 10),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward,
                         color: Colors.white,
                       ),
