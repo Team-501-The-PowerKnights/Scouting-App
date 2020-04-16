@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class SetupTitle extends StatelessWidget {
   const SetupTitle();
+
   @override
   Widget build(BuildContext context) {
     return Text(
@@ -10,7 +11,7 @@ class SetupTitle extends StatelessWidget {
       style: TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: 80,
-        fontFamily: "Raleway",
+        fontFamily: 'Raleway',
         decoration: TextDecoration.underline,
       ),
     );
@@ -28,7 +29,31 @@ class SetupSubtitle extends StatelessWidget {
       subTitle,
       style: TextStyle(
         fontSize: 30,
-        fontFamily: "Raleway",
+        fontFamily: 'Raleway',
+      ),
+    );
+  }
+}
+
+class SetupFooter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      child: Center(
+        child: Container(
+          color: Colors.green,
+          child: Center(
+            child: Text(
+              'Settings can be changed at any time',
+              style: TextStyle(
+                fontSize: 16,
+                fontFamily: 'Raleway',
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

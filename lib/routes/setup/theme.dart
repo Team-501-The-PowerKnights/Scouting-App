@@ -49,6 +49,7 @@ class SetupThemeRoute extends StatelessWidget {
           ],
         ),
       ),
+      bottomSheet: SetupFooter(),
     );
   }
 }
