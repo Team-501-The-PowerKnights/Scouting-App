@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:scouting_app/provider/themeChanger.dart';
+import 'package:scouting_app/routes/setup/position.dart';
 
 // Package imports
 import 'package:shared_preferences/shared_preferences.dart';
@@ -46,6 +47,7 @@ class ScoutingAppEntry extends StatelessWidget {
                         SetupGreetingRoute.routeName: (ctx) =>
                             SetupGreetingRoute(),
                         SetupThemeRoute.routeName: (ctx) => SetupThemeRoute(),
+                        SetupPositionRoute.routeName: (ctx) => SetupPositionRoute(),
                       },
                     )
                   : Container(),
