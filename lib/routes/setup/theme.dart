@@ -1,6 +1,7 @@
 // Flutter imports
 import 'package:flutter/material.dart';
 import 'package:scouting_app/provider/themeChanger.dart';
+import 'package:scouting_app/routes/setup/position.dart';
 
 // Project imports
 import 'package:scouting_app/routes/setup/widgets/text.dart';
@@ -46,6 +47,36 @@ class SetupThemeRoute extends StatelessWidget {
               selectedBorderColor: Colors.black,
               themeMode: ThemeMode.light,
             ),
+            const _Spacer(),
+            RaisedButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                  ),
+                  onPressed: () => Navigator.popAndPushNamed(
+                    context,
+                    SetupPositionRoute.routeName,
+                  ),
+                  color: Colors.green,
+                  splashColor: Colors.green,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      const Text(
+                        "Next",
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      const Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
+                )
           ],
         ),
       ),
