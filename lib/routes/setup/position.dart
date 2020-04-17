@@ -1,5 +1,7 @@
 // Flutter imports
 import 'package:flutter/material.dart';
+import 'package:scouting_app/routes/setup/greeting.dart';
+import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
 
 // Package Imports
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,36 +25,10 @@ class SetupPositionRoute extends StatelessWidget {
             const SizedBox(height: 50),
             _PositionOptions(),
             _Spacer(),
-            RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18.0),
-              ),
-              onPressed: () => Navigator.popAndPushNamed(
-                context,
-                SetupPositionRoute
-                    .routeName, // TODO - Replace with Team Number Route (or vice versa)
-              ),
-              color: Colors.green,
-              splashColor: Colors.green,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  const Text(
-                    "Next",
-                    style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  const Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-            ),
+            SetupNavigatorButton(
+                text: "Next",
+                routeName: SetupGreetingRoute
+                    .routeName), // TODO - Rigure out where this routes to. Team Number?
           ],
         ),
       ),
