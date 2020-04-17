@@ -36,29 +36,22 @@ class SetupSubtitle extends StatelessWidget {
 }
 
 class SetupFooter extends StatelessWidget {
+  final String settingStep;
+
+  SetupFooter(this.settingStep);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 50,
       padding: EdgeInsets.only(bottom: 10),
       child: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Icon(
-              Icons.settings,
-            ),
-            SizedBox(
-              width: 5,
-            ),
-            Text(
-              'Settings can be changed at any time',
-              style: TextStyle(
-                fontSize: 16,
-                fontFamily: 'Raleway',
-              ),
-            ),
-          ],
+        child: Text(
+          'The $settingStep be changed at any time',
+          style: TextStyle(
+            fontSize: 16,
+            fontFamily: 'Raleway',
+          ),
         ),
       ),
     );
