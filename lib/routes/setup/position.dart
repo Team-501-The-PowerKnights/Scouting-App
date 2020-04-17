@@ -1,13 +1,13 @@
 // Flutter imports
 import 'package:flutter/material.dart';
-import 'package:scouting_app/routes/setup/greeting.dart';
-import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
 
 // Package Imports
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Project Imports
 import 'package:scouting_app/routes/setup/widgets/text.dart';
+import 'package:scouting_app/routes/setup/greeting.dart';
+import 'package:scouting_app/routes/setup/widgets/nextButton.dart';
 
 class SetupPositionRoute extends StatelessWidget {
   static const routeName = '/setup/position';
@@ -26,13 +26,13 @@ class SetupPositionRoute extends StatelessWidget {
             _PositionOptions(),
             _Spacer(),
             SetupNavigatorButton(
-                text: "Next",
-                routeName: SetupGreetingRoute
-                    .routeName), // TODO - Rigure out where this routes to. Team Number?
+              text: 'Next',
+              routeName: SetupGreetingRoute.routeName,
+            ),
           ],
         ),
       ),
-      bottomSheet: SetupFooter(),
+      bottomSheet: SetupFooter('position'),
     );
   }
 }
@@ -125,7 +125,7 @@ class _PositionOptionsState extends State<_PositionOptions> {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           width: 30,
         ),
         Column(
@@ -195,7 +195,7 @@ class _PositionOptionsState extends State<_PositionOptions> {
     );
   }
 
-  void _setSelected(String name) async {
+  Future<void> _setSelected(String name) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('Position', name);
   }
@@ -210,7 +210,10 @@ class _PositionOptionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: TextStyle(color: Colors.white, fontSize: 20),
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 20,
+      ),
     );
   }
 }

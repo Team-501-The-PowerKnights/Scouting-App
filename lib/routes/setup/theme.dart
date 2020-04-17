@@ -1,11 +1,11 @@
 // Flutter imports
 import 'package:flutter/material.dart';
-import 'package:scouting_app/provider/themeChanger.dart';
-import 'package:scouting_app/routes/setup/position.dart';
-import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
 
 // Project imports
 import 'package:scouting_app/routes/setup/widgets/text.dart';
+import 'package:scouting_app/provider/themeChanger.dart';
+import 'package:scouting_app/routes/setup/position.dart';
+import 'package:scouting_app/routes/setup/widgets/nextButton.dart';
 
 class SetupThemeRoute extends StatelessWidget {
   static const routeName = '/setup/theme';
@@ -15,13 +15,16 @@ class SetupThemeRoute extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            const SizedBox(
+              height: 20,
+            ),
             const SetupTitle(),
             SetupSubtitle(
               '🎨 Theme',
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 20),
             _ThemeOption(
               name: 'System',
               description: 'Theme mode on your device',
@@ -50,11 +53,16 @@ class SetupThemeRoute extends StatelessWidget {
             ),
             const _Spacer(),
             SetupNavigatorButton(
-                text: "Next", routeName: SetupPositionRoute.routeName),
+              text: "Next",
+              routeName: SetupPositionRoute.routeName,
+            ),
+            const SizedBox(
+              height: 50,
+            )
           ],
         ),
       ),
-      bottomSheet: SetupFooter(),
+      bottomSheet: SetupFooter('theme'),
     );
   }
 }
