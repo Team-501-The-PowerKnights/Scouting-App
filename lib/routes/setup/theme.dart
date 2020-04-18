@@ -13,53 +13,62 @@ class SetupThemeRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            const SizedBox(
-              height: 20,
-            ),
-            const SetupTitle(),
-            SetupSubtitle(
-              '🎨 Theme',
-            ),
-            const SizedBox(height: 20),
-            _ThemeOption(
-              name: 'System',
-              description: 'Theme mode on your device',
-              backgroundColor: Colors.black,
-              textColor: Colors.white,
-              selectedBorderColor: Colors.white,
-              themeMode: ThemeMode.system,
-            ),
-            const _Spacer(),
-            _ThemeOption(
-              name: "Dark",
-              description: "🌑 Dark Mode",
-              backgroundColor: Colors.black,
-              textColor: Colors.white,
-              selectedBorderColor: Colors.white,
-              themeMode: ThemeMode.dark,
-            ),
-            const _Spacer(),
-            _ThemeOption(
-              name: "Light",
-              description: "☀️ Light Mode",
-              backgroundColor: Colors.white,
-              textColor: Colors.black,
-              selectedBorderColor: Colors.black,
-              themeMode: ThemeMode.light,
-            ),
-            const _Spacer(),
-            SetupNavigatorButton(
-              text: "Next",
-              routeName: SetupPositionRoute.routeName,
-            ),
-            const SizedBox(
-              height: 50,
-            )
-          ],
+        child: Container(
+          width: 300,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              const SizedBox(
+                height: 20,
+              ),
+              const SetupTitle(),
+              SetupSubtitle(
+                '🎨 Theme',
+              ),
+              const SizedBox(height: 20),
+              _ThemeOption(
+                name: 'System',
+                description: 'Theme mode on your device',
+                backgroundColor: Colors.black,
+                textColor: Colors.white,
+                selectedBorderColor: Colors.white,
+                themeMode: ThemeMode.system,
+              ),
+              const _Spacer(),
+              _ThemeOption(
+                name: "Dark",
+                description: "🌑 Dark Mode",
+                backgroundColor: Colors.black,
+                textColor: Colors.white,
+                selectedBorderColor: Colors.white,
+                themeMode: ThemeMode.dark,
+              ),
+              const _Spacer(),
+              _ThemeOption(
+                name: "Light",
+                description: "☀️ Light Mode",
+                backgroundColor: Colors.white,
+                textColor: Colors.black,
+                selectedBorderColor: Colors.black,
+                themeMode: ThemeMode.light,
+              ),
+              const _Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SetupNavigatorButton(
+                    text: "Next",
+                    routeName: SetupPositionRoute.routeName,
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 50,
+              )
+            ],
+          ),
         ),
       ),
       bottomSheet: SetupFooter('theme'),
