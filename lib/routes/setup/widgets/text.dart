@@ -47,7 +47,7 @@ class SetupFooter extends StatelessWidget {
       padding: EdgeInsets.only(bottom: 10),
       child: Center(
         child: Text(
-          'The $settingStep be changed at any time',
+          'The $settingStep can be changed at any time',
           style: TextStyle(
             fontSize: 16,
             fontFamily: 'Raleway',
