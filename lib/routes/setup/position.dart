@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // Project Imports
 import 'package:scouting_app/routes/setup/widgets/text.dart';
 import 'package:scouting_app/routes/setup/greeting.dart';
-import 'package:scouting_app/routes/setup/widgets/nextButton.dart';
+import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
 
 class SetupPositionRoute extends StatelessWidget {
   static const routeName = '/setup/position';
