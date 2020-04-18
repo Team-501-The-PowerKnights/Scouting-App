@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:scouting_app/routes/setup/widgets/text.dart';
 import 'package:scouting_app/provider/themeChanger.dart';
 import 'package:scouting_app/routes/setup/position.dart';
-import 'package:scouting_app/routes/setup/widgets/nextButton.dart';
+import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
 
 class SetupThemeRoute extends StatelessWidget {
   static const routeName = '/setup/theme';
