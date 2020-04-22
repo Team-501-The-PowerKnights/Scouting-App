@@ -21,10 +21,10 @@ class SetupPositionRoute extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const SetupTitle(),
-            SetupSubtitle('Position'),
+            const SetupSubtitle('Position'),
             const SizedBox(height: 50),
-            _PositionOptions(),
-            _Spacer(),
+            const _PositionOptions(),
+            const _Spacer(),
             SetupNavigatorButton(
               text: 'Next',
               routeName: SetupGreetingRoute.routeName,
@@ -48,6 +48,7 @@ class _Spacer extends StatelessWidget {
 enum _Position { Red1, Red2, Red3, Blue1, Blue2, Blue3 }
 
 class _PositionOptions extends StatefulWidget {
+  const _PositionOptions();
   @override
   State<StatefulWidget> createState() {
     return _PositionOptionsState();
@@ -71,7 +72,7 @@ class _PositionOptionsState extends State<_PositionOptions> {
                 borderRadius: BorderRadius.circular(50),
               ),
               child: RadioListTile<_Position>(
-                title: _PositionOptionTitle(title: 'Red 1'),
+                title: const _PositionOptionTitle(title: 'Red 1'),
                 activeColor: Colors.white,
                 value: _Position.Red1,
                 groupValue: _position,
@@ -91,7 +92,7 @@ class _PositionOptionsState extends State<_PositionOptions> {
                 borderRadius: BorderRadius.circular(50),
               ),
               child: RadioListTile<_Position>(
-                title: _PositionOptionTitle(title: 'Red 2'),
+                title: const _PositionOptionTitle(title: 'Red 2'),
                 activeColor: Colors.white,
                 value: _Position.Red2,
                 groupValue: _position,
@@ -111,7 +112,7 @@ class _PositionOptionsState extends State<_PositionOptions> {
                 borderRadius: BorderRadius.circular(50),
               ),
               child: RadioListTile<_Position>(
-                title: _PositionOptionTitle(title: 'Red 3'),
+                title: const _PositionOptionTitle(title: 'Red 3'),
                 activeColor: Colors.white,
                 value: _Position.Red3,
                 groupValue: _position,
@@ -137,7 +138,7 @@ class _PositionOptionsState extends State<_PositionOptions> {
                 borderRadius: BorderRadius.circular(50),
               ),
               child: RadioListTile<_Position>(
-                title: _PositionOptionTitle(title: 'Blue 1'),
+                title: const _PositionOptionTitle(title: 'Blue 1'),
                 activeColor: Colors.white,
                 value: _Position.Blue1,
                 groupValue: _position,
@@ -157,7 +158,7 @@ class _PositionOptionsState extends State<_PositionOptions> {
                 borderRadius: BorderRadius.circular(50),
               ),
               child: RadioListTile<_Position>(
-                title: _PositionOptionTitle(title: 'Blue 2'),
+                title: const _PositionOptionTitle(title: 'Blue 2'),
                 activeColor: Colors.white,
                 value: _Position.Blue2,
                 groupValue: _position,
@@ -177,7 +178,7 @@ class _PositionOptionsState extends State<_PositionOptions> {
                 borderRadius: BorderRadius.circular(50),
               ),
               child: RadioListTile<_Position>(
-                title: _PositionOptionTitle(title: 'Blue 3'),
+                title: const _PositionOptionTitle(title: 'Blue 3'),
                 activeColor: Colors.white,
                 value: _Position.Blue3,
                 groupValue: _position,
@@ -204,7 +205,7 @@ class _PositionOptionsState extends State<_PositionOptions> {
 class _PositionOptionTitle extends StatelessWidget {
   final String title;
 
-  _PositionOptionTitle({@required this.title});
+  const _PositionOptionTitle({@required this.title});
 
   @override
   Widget build(BuildContext context) {
