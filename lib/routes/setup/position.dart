@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Project Imports
-import 'package:scouting_app/routes/setup/widgets/text.dart';
 import 'package:scouting_app/routes/setup/greeting.dart';
 import 'package:scouting_app/widgets/navbutton.dart';
+import 'package:scouting_app/widgets/text.dart';
+import 'package:scouting_app/routes/setup/widgets/text.dart';
 
 class SetupPositionRoute extends StatelessWidget {
   static const routeName = '/setup/position';
@@ -21,7 +22,7 @@ class SetupPositionRoute extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const SetupTitle(),
-            SetupSubtitle('Position'),
+            Subtitle('Position'),
             const SizedBox(height: 50),
             _PositionOptions(),
             _Spacer(),

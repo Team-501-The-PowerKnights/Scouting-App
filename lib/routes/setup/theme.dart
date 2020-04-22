@@ -2,10 +2,11 @@
 import 'package:flutter/material.dart';
 
 // Project imports
-import 'package:scouting_app/routes/setup/widgets/text.dart';
 import 'package:scouting_app/provider/themeChanger.dart';
 import 'package:scouting_app/routes/setup/position.dart';
+import 'package:scouting_app/routes/setup/widgets/text.dart';
 import 'package:scouting_app/widgets/navbutton.dart';
+import 'package:scouting_app/widgets/text.dart';
 
 class SetupThemeRoute extends StatelessWidget {
   static const routeName = '/setup/theme';
@@ -21,7 +22,7 @@ class SetupThemeRoute extends StatelessWidget {
               height: 20,
             ),
             const SetupTitle(),
-            SetupSubtitle(
+            Subtitle(
               '🎨 Theme',
             ),
             const SizedBox(height: 20),
