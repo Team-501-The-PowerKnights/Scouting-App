@@ -6,7 +6,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 // Project imports
 import 'package:scouting_app/routes/setup/theme.dart';
-import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
+import 'package:scouting_app/widgets/navbutton.dart';
 
 class SetupGreetingRoute extends StatelessWidget {
   static const routeName = '/setup/greeting';
@@ -44,7 +44,7 @@ class SetupGreetingRoute extends StatelessWidget {
                 const SizedBox(
                   height: 70,
                 ),
-                SetupNavigatorButton(
+                NavigatorButton(
                   text: 'Start Setup',
                   routeName: SetupThemeRoute.routeName,
                 ),

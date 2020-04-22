@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SetupNavigatorButton extends StatelessWidget {
+class NavigatorButton extends StatelessWidget {
   final String text;
   final String routeName;
 
-  const SetupNavigatorButton({@required this.text, @required this.routeName});
+  const NavigatorButton({@required this.text, @required this.routeName});
 
   @override
   Widget build(BuildContext context) {
