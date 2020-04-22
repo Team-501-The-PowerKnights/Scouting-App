@@ -21,7 +21,7 @@ class SetupTitle extends StatelessWidget {
 class SetupSubtitle extends StatelessWidget {
   final String subTitle;
 
-  SetupSubtitle(this.subTitle);
+  const SetupSubtitle(this.subTitle);
 
   @override
   Widget build(BuildContext context) {

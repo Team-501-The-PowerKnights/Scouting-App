@@ -17,14 +17,12 @@ class SetupThemeRoute extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            const SizedBox(
-              height: 20,
-            ),
+            const _Spacer(),
             const SetupTitle(),
             SetupSubtitle(
               '🎨 Theme',
             ),
-            const SizedBox(height: 20),
+            const _Spacer(),
             _ThemeOption(
               name: 'System',
               description: 'Theme mode on your device',
