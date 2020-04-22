@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:scouting_app/provider/themeChanger.dart';
+import 'package:scouting_app/routes/scouting/match_info.dart';
 import 'package:scouting_app/routes/setup/position.dart';
 
 // Package imports
@@ -30,27 +31,28 @@ class ScoutingAppEntry extends StatelessWidget {
       child: Consumer<ThemeChanger>(
         builder: (context, themeChanger, _) => FutureBuilder(
           future: _checkSetup(),
-          builder: (context, snapshot) =>
-              snapshot.connectionState == ConnectionState.done
-                  ? MaterialApp(
-                      title: 'Scouting App',
-                      debugShowCheckedModeBanner: false,
-                      theme: Themes().lightTheme,
-                      darkTheme: Themes().darkTheme,
-                      themeMode: themeChanger.activeTheme,
-                      initialRoute: snapshot.data
-                          ? HomeRoute.routeName
-                          : SetupGreetingRoute.routeName,
-                      routes: {
-                        HomeRoute.routeName: (ctx) => HomeRoute(),
-                        // Setup
-                        SetupGreetingRoute.routeName: (ctx) =>
-                            SetupGreetingRoute(),
-                        SetupThemeRoute.routeName: (ctx) => SetupThemeRoute(),
-                        SetupPositionRoute.routeName: (ctx) => SetupPositionRoute(),
-                      },
-                    )
-                  : Container(),
+          builder: (context, snapshot) => snapshot.connectionState ==
+                  ConnectionState.done
+              ? MaterialApp(
+                  title: 'Scouting App',
+                  debugShowCheckedModeBanner: false,
+                  theme: Themes().lightTheme,
+                  darkTheme: Themes().darkTheme,
+                  themeMode: themeChanger.activeTheme,
+                  // initialRoute: MatchInfoScreen.routeName, // TODO - for testing purposes only
+                  initialRoute: snapshot.data
+                      ? HomeRoute.routeName
+                      : SetupGreetingRoute.routeName,
+                  routes: {
+                    HomeRoute.routeName: (ctx) => HomeRoute(),
+                    // Setup
+                    SetupGreetingRoute.routeName: (ctx) => SetupGreetingRoute(),
+                    SetupThemeRoute.routeName: (ctx) => SetupThemeRoute(),
+                    SetupPositionRoute.routeName: (ctx) => SetupPositionRoute(),
+                    MatchInfoScreen.routeName: (ctx) => MatchInfoScreen(),
+                  },
+                )
+              : Container(),
         ),
       ),
     );
