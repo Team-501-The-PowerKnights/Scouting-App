@@ -32,6 +32,7 @@ class MatchInfoScreen extends StatelessWidget {
               DataEntryTitle(text: 'Match Number'),
               const _Spacer(),
               TextField(
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(), labelText: 'Match number'),
                 onSubmitted: (String value) {
