@@ -10,7 +10,7 @@ import 'package:scouting_app/routes/home/home.dart';
 import 'package:scouting_app/routes/setup/greeting.dart';
 import 'package:scouting_app/routes/setup/theme.dart';
 import 'package:scouting_app/themes.dart';
-import 'package:scouting_app/routes/setup/widgets/teamNumber.dart';
+import 'package:scouting_app/routes/setup/teamNumber.dart';
 import 'package:scouting_app/provider/themeChanger.dart';
 import 'package:scouting_app/routes/setup/position.dart';
 
@@ -48,9 +48,9 @@ class ScoutingAppEntry extends StatelessWidget {
                         // Setup
                         SetupGreetingRoute.routeName: (ctx) =>
                             SetupGreetingRoute(),
+                        SetupTeamNumberRoute.routeName: (ctx) => SetupTeamNumberRoute(),
                         SetupThemeRoute.routeName: (ctx) => SetupThemeRoute(),
                         SetupPositionRoute.routeName: (ctx) => SetupPositionRoute(),
-                        SetupTeamNumberRoute.routeName: (ctx) => SetupTeamNumberRoute(),
                       },
                     )
                   : Container(),
