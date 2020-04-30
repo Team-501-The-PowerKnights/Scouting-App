@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 //Project Imports
 import 'package:scouting_app/routes/setup/widgets/text.dart';
-import 'package:scouting_app/routes/setup/greeting.dart';
+import 'package:scouting_app/routes/setup/position.dart';
 import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
 
 class SetupTeamNumberRoute extends StatelessWidget {
@@ -27,7 +27,7 @@ class SetupTeamNumberRoute extends StatelessWidget {
             const _Spacer(),
             SetupNavigatorButton(
               text: 'Next',
-              routeName: SetupGreetingRoute.routeName
+              routeName: SetupPositionRoute.routeName
             ),
           ],
         ),

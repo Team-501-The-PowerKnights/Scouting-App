@@ -48,8 +48,8 @@ class ScoutingAppEntry extends StatelessWidget {
                         // Setup
                         SetupGreetingRoute.routeName: (ctx) =>
                             SetupGreetingRoute(),
-                        SetupTeamNumberRoute.routeName: (ctx) => SetupTeamNumberRoute(),
                         SetupThemeRoute.routeName: (ctx) => SetupThemeRoute(),
+                        SetupTeamNumberRoute.routeName: (ctx) => SetupTeamNumberRoute(),
                         SetupPositionRoute.routeName: (ctx) => SetupPositionRoute(),
                       },
                     )
