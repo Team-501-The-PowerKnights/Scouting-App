@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Project imports
 import 'package:scouting_app/routes/setup/widgets/text.dart';
 import 'package:scouting_app/provider/themeChanger.dart';
-import 'package:scouting_app/routes/setup/position.dart';
+import 'package:scouting_app/routes/setup/teamNumber.dart';
 import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
 
 class SetupThemeRoute extends StatelessWidget {
@@ -60,7 +60,7 @@ class SetupThemeRoute extends StatelessWidget {
                 children: [
                   SetupNavigatorButton(
                     text: "Next",
-                    routeName: SetupPositionRoute.routeName,
+                    routeName: SetupTeamNumberRoute.routeName,
                   ),
                 ],
               ),

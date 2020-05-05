@@ -1,16 +1,18 @@
 // Flutter imports
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:scouting_app/provider/themeChanger.dart';
-import 'package:scouting_app/routes/setup/position.dart';
 
 // Package imports
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:provider/provider.dart';
+
 // Project imports
 import 'package:scouting_app/routes/home/home.dart';
 import 'package:scouting_app/routes/setup/greeting.dart';
 import 'package:scouting_app/routes/setup/theme.dart';
 import 'package:scouting_app/themes.dart';
+import 'package:scouting_app/routes/setup/teamNumber.dart';
+import 'package:scouting_app/provider/themeChanger.dart';
+import 'package:scouting_app/routes/setup/position.dart';
 
 void main() => runApp(ScoutingAppEntry());
 
@@ -47,6 +49,7 @@ class ScoutingAppEntry extends StatelessWidget {
                         SetupGreetingRoute.routeName: (ctx) =>
                             SetupGreetingRoute(),
                         SetupThemeRoute.routeName: (ctx) => SetupThemeRoute(),
+                        SetupTeamNumberRoute.routeName: (ctx) => SetupTeamNumberRoute(),
                         SetupPositionRoute.routeName: (ctx) => SetupPositionRoute(),
                       },
                     )

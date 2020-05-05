@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // Package imports
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
+
 // Project imports
 import 'package:scouting_app/routes/setup/theme.dart';
 import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
