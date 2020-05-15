@@ -1,10 +1,10 @@
-// Flutter imports
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-// Package Imports
+// 📦 Package imports:
 import 'package:shared_preferences/shared_preferences.dart';
 
-// Project Imports
+// 🌎 Project imports:
 import 'package:scouting_app/routes/setup/widgets/text.dart';
 import 'package:scouting_app/routes/setup/greeting.dart';
 import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';

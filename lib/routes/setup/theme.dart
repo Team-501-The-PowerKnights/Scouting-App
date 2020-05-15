@@ -1,7 +1,7 @@
-// Flutter imports
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-// Project imports
+// 🌎 Project imports:
 import 'package:scouting_app/routes/setup/widgets/text.dart';
 import 'package:scouting_app/provider/themeChanger.dart';
 import 'package:scouting_app/routes/setup/teamNumber.dart';

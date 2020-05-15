@@ -1,17 +1,17 @@
-// Flutter Imports
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-//Package Imports
+// 📦 Package imports:
 import 'package:shared_preferences/shared_preferences.dart';
 
-//Project Imports
+// 🌎 Project imports:
 import 'package:scouting_app/routes/setup/widgets/text.dart';
 import 'package:scouting_app/routes/setup/position.dart';
 import 'package:scouting_app/routes/setup/widgets/nextbutton.dart';
 
 class SetupTeamNumberRoute extends StatelessWidget {
   static const routeName = '/setup/teamNumber';
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,9 +26,7 @@ class SetupTeamNumberRoute extends StatelessWidget {
             const _TeamNumberInput(),
             const _Spacer(),
             SetupNavigatorButton(
-              text: 'Next',
-              routeName: SetupPositionRoute.routeName
-            ),
+                text: 'Next', routeName: SetupPositionRoute.routeName),
           ],
         ),
       ),
@@ -86,5 +84,3 @@ class _TeamNumberInputState extends State<_TeamNumberInput> {
     await prefs.setString('Team Number', number);
   }
 }
-
-
