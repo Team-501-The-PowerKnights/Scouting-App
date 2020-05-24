@@ -12,7 +12,7 @@ dev_dependencies:
   local_google_fonts: '^1.0.8'
   flutter_test:
     sdk: flutter
-  import_sorter: ^3.0.5
+  import_sorter: ^3.0.6
 environment:
   sdk: '>=2.7.0 <3.0.0'
 flutter:
